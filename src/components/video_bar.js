@@ -5,7 +5,7 @@ class VideoBar extends Component{
     render(){
         return (
         <ol>
-          oh  <TestComp/> 
+          By:  <TestComp/> 
         </ol>);
     }
 }

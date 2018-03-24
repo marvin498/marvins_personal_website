@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 
 class TestComp extends Component{
     render(){
-        return <li no> Hello</li>
+        return <h2 no> Marvin Moise</h2>
     }
 }
 export default TestComp;
