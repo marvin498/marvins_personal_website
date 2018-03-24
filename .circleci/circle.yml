@@ -11,4 +11,5 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: marvins_personal_website
+      appname: dendenmarvin.git #TODO: Change name to that of permanent address 
+      
