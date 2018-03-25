@@ -1,26 +1,22 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import SearchBar from './components/search_bar'
-import VideoBar from './components/video_bar';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import SearchBar from "./components/search_bar";
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Currently under development</h1>
-        </header>
-        <div>
-         <SearchBar />
-        </div>
-        <div>
-          <VideoBar/>
-        </div>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className="App">
+				<header className="App-header">
+					<img src={logo} className="App-logo" alt="logo" />
+					<h1 className="App-title">Currently under development {<br/>} By: Marvin Moise</h1>
+				</header>
+				<div>
+					<SearchBar />
+				</div>
+			</div>
+		);
+	}
 }
 
 export default App;
