@@ -2,37 +2,49 @@ import React, { Component } from "react";
 import NavBarComponent from "./NavBarComponent.jsx";
 import logo from "../images/logo.JPG";
 import { Link } from "react-router-dom";
+import { Dropdown } from "semantic-ui-react";
 
 class NavBarContainer extends Component {
-	render() {
-		const props = {
+	returnDropDownObjectInfo = () => {
+		return {
 			as: "a",
 			logo: logo,
 			dropDownText: "Dropdown",
-			homeDropDownItem: {
-				homeText: "Home",
-				homeIcon: "expand",
-				homeClass: "left floated",
-				homeLabel: "HOME",
-				homeTo: "/"
-			},
-			galleryDropDownItem: {
-				galleryText: "Gallery",
-				galleryIcon: "expand",
-				galleryClass: "left floated",
-				galleryLabel: "GALLERY",
-				galleryAs: { Link },
-				galleryTo: "/gallery"
-			}
+			homeDropDownItem: this.returnDropDownItems(
+				Link,
+				"Home",
+				"expand",
+				"left floated",
+				"HOME",
+				"/"
+			),
+			galleryDropDownItem: this.returnDropDownItems(
+				Link,
+				"Gallery",
+				"expand",
+				"left floated",
+				"GALLERY",
+				"/gallery"
+			)
 		};
+	};
 
-		const propsToSend = {
-			...props,
-			...props.homeDropDownItem,
-			...props.galleryDropDownItem
-		};
+	returnDropDownItems = (ddAs, ddText, ddIcon, ddClass, ddLabel, ddTo) => {
+		return (
+			<Dropdown.Item
+				as={ddAs}
+				text={ddText}
+				icon={ddIcon}
+				class={ddClass}
+				label={ddLabel}
+				to={ddTo}
+			/>
+		);
+	};
 
-		return <NavBarComponent {...propsToSend} />;
+	render() {
+		const props = this.returnDropDownObjectInfo();
+		return <NavBarComponent {...props} />;
 	}
 }
 export default NavBarContainer;

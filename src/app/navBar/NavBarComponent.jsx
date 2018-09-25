@@ -29,22 +29,8 @@ const NavBarComponent = navContent => {
 					</Menu.Item>
 					<Dropdown item simple text={navContent.dropDownText}>
 						<Dropdown.Menu>
-							<Dropdown.Item
-								as={Link}
-								text={navContent.homeText}
-								icon={navContent.homeIcon}
-								class={navContent.homeClass}
-								label={navContent.homeLabel}
-								to={navContent.homeTo}
-							/>
-							<Dropdown.Item
-								as={Link}
-								text={navContent.galleryText}
-								icon={navContent.galleryIcon}
-								class={navContent.galleryClass}
-								label={navContent.galleryLabel}
-								to={navContent.galleryTo}
-							/>
+							{navContent.homeDropDownItem}
+							{navContent.galleryDropDownItem}
 						</Dropdown.Menu>
 					</Dropdown>
 				</Container>
