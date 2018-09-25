@@ -1,19 +1,23 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
-import SearchBar from "./components/search_bar";
+import HomeContainer from "././app/home/HomeContainer.js";
+import GalleryContainer from "././app/gallery/GalleryContainer.js";
+import NavBarContainer from "././app/navBar/NavBarContainer.js";
+import WebsiteFooterComponent from "././app/siteFooter/websiteFooterComponent.jsx";
 
 class App extends Component {
 	render() {
 		return (
 			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<h1 className="App-title">Currently under development {<br/>} By: Marvin Moise</h1>
-				</header>
-				<div>
-					<SearchBar />
-				</div>
+				<Router>
+					<div>
+						<NavBarContainer />
+						<Route exact path="/" component={HomeContainer} />
+						<Route path="/gallery" component={GalleryContainer} />
+					</div>
+				</Router>
+				<WebsiteFooterComponent />
 			</div>
 		);
 	}
