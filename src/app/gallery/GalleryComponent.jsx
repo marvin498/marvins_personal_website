@@ -1,8 +1,9 @@
 import React from "react";
-import SegmentContainer from "./../shared/segment/SegmentContainer";
+import { Segment } from "semantic-ui-react";
+
 function GalleryComponent(galleryContent) {
 	return (
-		<body>
+		<Segment attached verticle="true">
 			{galleryContent.card}
 			<div className="section" id="watchedMovies">
 				Movies I've seen go here
@@ -10,7 +11,7 @@ function GalleryComponent(galleryContent) {
 			<div className="section" id="googlePhotoImg">
 				Google Image Photos go here
 			</div>
-		</body>
+		</Segment>
 	);
 }
 

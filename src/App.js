@@ -4,7 +4,7 @@ import "./App.css";
 import HomeContainer from "././app/home/HomeContainer.js";
 import GalleryContainer from "././app/gallery/GalleryContainer.js";
 import NavBarContainer from "././app/navBar/NavBarContainer.js";
-import WebsiteFooterComponent from "././app/siteFooter/websiteFooterComponent.jsx";
+import * as routes from "./constants/routes";
 
 class App extends Component {
 	render() {
@@ -13,11 +13,10 @@ class App extends Component {
 				<Router>
 					<div>
 						<NavBarContainer />
-						<Route exact path="/" component={HomeContainer} />
-						<Route path="/gallery" component={GalleryContainer} />
+						<Route exact path={routes.ABOUT_ME} component={HomeContainer} />
+						<Route exact path={routes.GALLERY} component={GalleryContainer} />
 					</div>
 				</Router>
-				<WebsiteFooterComponent />
 			</div>
 		);
 	}

@@ -1,49 +1,16 @@
 import React, { Component } from "react";
 import NavBarComponent from "./NavBarComponent.jsx";
-import logo from "../images/logo.JPG";
-import { Link } from "react-router-dom";
 import { Dropdown } from "semantic-ui-react";
-
+import * as propObjects from "./../../constants/cardObjects.js";
 class NavBarContainer extends Component {
-	returnDropDownObjectInfo = () => {
-		return {
-			as: "a",
-			logo: logo,
-			dropDownText: "Dropdown",
-			homeDropDownItem: this.returnDropDownItems(
-				Link,
-				"Home",
-				"expand",
-				"left floated",
-				"HOME",
-				"/"
-			),
-			galleryDropDownItem: this.returnDropDownItems(
-				Link,
-				"Gallery",
-				"expand",
-				"left floated",
-				"GALLERY",
-				"/gallery"
-			)
-		};
-	};
-
-	returnDropDownItems = (ddAs, ddText, ddIcon, ddClass, ddLabel, ddTo) => {
-		return (
-			<Dropdown.Item
-				as={ddAs}
-				text={ddText}
-				icon={ddIcon}
-				class={ddClass}
-				label={ddLabel}
-				to={ddTo}
-			/>
-		);
-	};
-
 	render() {
-		const props = this.returnDropDownObjectInfo();
+		const props = { 
+			...propObjects.NAV_BAR_LINKS.NAV_BAR_LOGO, 
+			homeDropDownItem: <Dropdown.Item { ...propObjects.NAV_BAR_LINKS.NAV_BAR_HOME_ABOUT_ME } />, 
+			galleryDropDownItem: <Dropdown.Item { ...propObjects.NAV_BAR_LINKS.NAV_BAR_GALLERY } />, 
+			gitHubNavItem:  {...propObjects.NAV_BAR_LINKS.NAV_BAR_GIT_HUB}, 
+			linkedinNavItem: { ...propObjects.NAV_BAR_LINKS.NAV_BAR_LINKEDIN} 
+		};
 		return <NavBarComponent {...props} />;
 	}
 }

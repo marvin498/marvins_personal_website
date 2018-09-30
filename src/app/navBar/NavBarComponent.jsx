@@ -1,42 +1,33 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Container, Dropdown, Image, Menu } from "semantic-ui-react";
-import logo from "../images/logo.JPG";
-
-const items = [
-	{ key: "editorials", active: true, name: "Editorials" },
-	{ key: "review", name: "Reviews" },
-	{ key: "events", name: "Upcoming Events" }
-];
-
-const MenuExampleProps = () => <Menu items={items} />;
+import { Container, Dropdown, Menu, Item } from "semantic-ui-react";
 
 const NavBarComponent = navContent => {
 	return (
-		<header>
-			<Menu fixed="top" inverted>
+		<Menu borderless secondary attached="top">
 				<Container>
-					<Menu.Item as={navContent.menuType} header>
-						<Link to="/">
-							<Image
-								size="tiny"
-								src={navContent.logo}
-								style={{ marginRight: "1.5em" }}
-								className="navbar-logo-image"
-								avatar
-							/>
-						</Link>
+					<Menu.Item as={navContent.as} position="left">
+						<Link to={navContent.to}>{navContent.logo}</Link>
 					</Menu.Item>
-					<Dropdown item simple text={navContent.dropDownText}>
+					<Dropdown item simple icon="bars big">
 						<Dropdown.Menu>
-							{navContent.homeDropDownItem}
-							{navContent.galleryDropDownItem}
+							<h3>
+								{navContent.homeDropDownItem}
+								{navContent.galleryDropDownItem}
+							</h3>
 						</Dropdown.Menu>
 					</Dropdown>
+					<Menu.Item position="right">
+						<Item as={navContent.gitHubNavItem.as} href={navContent.gitHubNavItem.href}>
+							{navContent.gitHubNavItem.icon}
+						</Item>
+						<Item as={navContent.linkedinNavItem.as} href={navContent.linkedinNavItem.href}>
+							{navContent.linkedinNavItem.icon}
+						</Item>
+					</Menu.Item>
 				</Container>
 			</Menu>
-		</header>
-	);
+		)
 };
 
 export default NavBarComponent;

@@ -1,0 +1,17 @@
+import cardImage from "./../app/images/cardImage.jpg";
+import logo from "./../app/images/logo.JPG";
+import itemLogo from "./../app/images/itemLogo.JPG";
+import gooseBoy from "./../app/images/gooseBoy.JPG";
+import chopper from "./../app/images/chopper.JPG";
+import sphinx from "./../app/images/sphinx.JPG";
+import panther from "./../app/images/panther.JPG";
+import sculpture from "./../app/images/sculpture.JPG";
+
+export const ABOUT_ME_IMG = cardImage;
+export const NAV_BAR_LOGO = logo;
+export const GALLERY_ITEM_IMG_1 = itemLogo;
+export const GOOSE_BOY = gooseBoy;
+export const CHOPPER_IMG = chopper;
+export const SPHINX_IMG = sphinx;
+export const PANTHER_IMG = panther;
+export const SCULPTURE_IMG = sculpture;
