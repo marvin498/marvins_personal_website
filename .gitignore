@@ -8,7 +8,6 @@
 
 # production
 /build
-firebase.js 
 
 # misc
 .DS_Store
@@ -43,3 +42,5 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
+/firebase
+firebase.js 

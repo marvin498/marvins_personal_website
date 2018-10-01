@@ -6,76 +6,72 @@ import * as images from "./images";
 import * as routes from "./routes.js";
 import * as externalRoutes from "./externalRoutes.js";
 
-//Cards in Gallery
 export const GALLERY_CARD_ITEMS = {
 	CARD_ONE: {
-		image: (
-			<Image src={images.GALLERY_ITEM_IMG_1} size={"large"} centered fluid />
-		),
-		header: "Yu-Gi-Oh",
-		meta: "heart of the cards",
-		description: "Story about the egyptian god cards and that one boy",
+		image: <Image src={images.GALLERY_ITEM_IMG} size={"large"} centered />,
+		header: "The Sphinx",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
 		color: "olive"
 	},
 	CARD_TWO: {
-		image: <Image src={images.SCULPTURE_IMG} size={"large"} centered fluid />,
-		header: "the lost boy",
-		meta: "raw the sun god",
-		description: "Story about the iron fist, no not the movie version",
+		image: <Image src={images.SCULPTURE_IMG} size={"large"} centered />,
+		header: "The Bearded Man",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
 		color: "purple"
 	},
 	CARD_THREE: {
-		image: <Image src={images.CHOPPER_IMG} size={"large"} centered fluid />,
-		header: "Yu-Gi-Oh",
-		meta: "heart of the cards",
-		description: "Story about the egyptian god cards and that one boy",
+		image: <Image src={images.CHOPPER_IMG} size={"large"} centered />,
+		header: "The Chopper",
+		meta: "Museum of Modern Art (MoMA)",
+		description: "Random Text That Is Placed Here For Looks",
 		color: "orange"
 	},
 	CARD_FOUR: {
-		image: <Image src={images.PANTHER_IMG} size={"large"} centered fluid />,
-		header: "the lost boy",
-		meta: "raw the sun god",
-		description: "Story about the iron fist, no not the movie version",
+		image: <Image src={images.PANTHER_IMG} size={"large"} centered />,
+		header: "The Jungle Book",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
 		color: "pink"
 	},
 	CARD_FIVE: {
-		image: <Image src={images.SPHINX_IMG} size={"large"} centered fluid />,
-		header: "Yu-Gi-Oh",
-		meta: "heart of the cards",
-		description: "Story about the egyptian god cards and that one boy",
+		image: <Image src={images.SPHINX_IMG} size={"large"} centered />,
+		header: "The Dark Sphinx",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
 		color: "teal"
 	},
 	CARD_SIX: {
-		image: <Image src={images.GOOSE_BOY} size={"large"} centered fluid />,
-		header: "the lost boy",
-		meta: "raw the sun god",
-		description: "Story about the iron fist, no not the movie version",
+		image: <Image src={images.GOOSE_BOY} size={"large"} centered />,
+		header: "The Boy",
+		meta: "MET museum",
+		description: "Random Text That Is Placed Here For Looks",
 		color: "red"
 	},
 	CARD_SEVEN: {
-		image: <Image src={ images.PANTHER_IMG } size={ "large" } centered fluid />,
-		header: "the lost boy",
-		meta: "raw the sun god",
-		description: "Story about the iron fist, no not the movie version",
-		color: "pink"
+		image: <Image src={ images.MUMMY_IMG } size={ "large" } centered />,
+		header: "The Mummy",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
+		color: "yellow"
 	},
 	CARD_EIGHT: {
-		image: <Image src={ images.SPHINX_IMG } size={ "large" } centered fluid />,
-		header: "Yu-Gi-Oh",
-		meta: "heart of the cards",
-		description: "Story about the egyptian god cards and that one boy",
-		color: "teal"
+		image: <Image src={ images.MONUMENT_IMG } size={ "large" } centered />,
+		header: "The Wall of Souls",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
+		color: "blue"
 	},
 	CARD_NINE: {
-		image: <Image src={ images.GOOSE_BOY } size={ "large" } centered fluid />,
-		header: "the lost boy",
-		meta: "raw the sun god",
-		description: "Story about the iron fist, no not the movie version",
-		color: "red"
+		image: <Image src={ images.KNIGHT_IMG } size={ "large" } centered />,
+		header: "The Golden Knight",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
+		color: "brown"
 	}
 };
 
-//Card in Home
 export const HOME_ITEMS = {
 	HOME_CARD: {
 		image: images.ABOUT_ME_IMG,
@@ -91,7 +87,6 @@ export const HOME_ITEMS = {
 	}
 };
 
-//Item in Home
 export const HOME_ABOUT_ME = {
 	ABOUT_ME: {
 		card: <CardContainer {...HOME_ITEMS.HOME_CARD} />,
@@ -130,7 +125,6 @@ export const HOME_ABOUT_ME = {
 	}
 };
 
-//Nav Bar
 export const NAV_BAR_LINKS = {
 	NAV_BAR_LOGO: {
 		as: "a",
@@ -139,19 +133,11 @@ export const NAV_BAR_LINKS = {
 		to: "/"
 	},
 	NAV_BAR_HOME_ABOUT_ME: {
-		as: Link,
-		text: "About me",
-		icon: "address card",
-		class: "left floated",
-		// label: "HOME",
+		name: 'den stories',
 		to: routes.ABOUT_ME
 	},
 	NAV_BAR_GALLERY: {
-		as: Link,
-		text: "Gallery",
-		icon: "picture",
-		class: "left floated",
-		// label: "GALLERY",
+		name: 'gallery',
 		to: routes.GALLERY
 	},
 	NAV_BAR_GIT_HUB: {

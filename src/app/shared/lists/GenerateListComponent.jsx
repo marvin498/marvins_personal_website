@@ -5,7 +5,7 @@ const GenerateListComponent = content => {
 	return <List divided horizontal>
 			<List.Item>
 				<List.Content>
-				<content.group centered itemsPerRow={content.limit}>
+					<content.group centered itemsPerRow={content.limit}>
 						{content.itemList.map(card => card)}
 					</content.group>
 				</List.Content>

@@ -6,14 +6,13 @@ import { CardGroup } from "semantic-ui-react";
 import * as items from "./../../constants/cardObjects.js";
 class GalleryContainer extends Component {
 	render() {
-		const props = { 
-			card: <GenerateListContainer 
-					{ ...items.GALLERY_CARD_ITEMS } 
-					group={ CardGroup } 
-					itemsPerRow={"3"}
-					wrapper={CardContainer}
-				/>
-		};
+		const passToProps = {
+			objectFromContainer: {...items.GALLERY_CARD_ITEMS},
+			group: CardGroup,
+			itemsPerRow: "3",
+			wrapper: CardContainer
+		}
+		const props = { card: <GenerateListContainer {...passToProps} />};
 
 		return <GalleryComponent {...props} />;
 	}
