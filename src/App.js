@@ -8,17 +8,15 @@ import * as routes from "./constants/routes";
 
 class App extends Component {
 	render() {
-		return (
-			<div className="App">
+		return <div className="App">
 				<Router>
 					<div>
 						<NavBarContainer />
-						<Route exact path={routes.ABOUT_ME} component={HomeContainer} />
+						<Route exact path={routes.DEN_STORIES} component={HomeContainer} />
 						<Route exact path={routes.GALLERY} component={GalleryContainer} />
 					</div>
 				</Router>
-			</div>
-		);
+			</div>;
 	}
 }
 

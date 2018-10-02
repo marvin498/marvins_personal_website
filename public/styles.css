@@ -7,3 +7,22 @@ a {
 .ui.card>.content>.header:not(.ui), .ui.cards>.card>.content>.header:not(.ui) {
 	color: #00b5ad!important;
 }
+
+.ui.secondary.menu .active.item {
+	color: #00b5ad!important;
+}
+
+.ui.secondary.pointing.menu .item {
+	color: #00b5ad!important;
+}
+
+.ui.secondary.pointing.menu .active.item {
+	/* color: #6435c9!important; */
+	/* color: #4183c4!important */
+	color: #00b5ad!important;
+}
+
+p {
+	margin: 0 0 1em;
+	line-height: 1.6285em!important;
+}

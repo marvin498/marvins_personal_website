@@ -3,7 +3,7 @@ import GalleryComponent from "./GalleryComponent.jsx";
 import GenerateListContainer from "./../shared/lists/GenerateListContainer.js";
 import CardContainer from "./../shared/cards/CardContainer.js";
 import { CardGroup } from "semantic-ui-react";
-import * as items from "./../../constants/cardObjects.js";
+import * as items from "./../../constants/propObjectContainer.js";
 class GalleryContainer extends Component {
 	render() {
 		const passToProps = {
