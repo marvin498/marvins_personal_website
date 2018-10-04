@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import NavBarComponent from "./NavBarComponent.jsx";
 import { Menu } from "semantic-ui-react";
-import * as propObjects from "./../../constants/propObjectContainer.js";
-import {withRouter} from "react-router";
+import * as retrievePropObjects from "./../../constants/propObjectContainer.js";
+import { withRouter } from "react-router";
 
 class NavBarContainer extends Component {
-	constructor (props) {
+	constructor(props) {
 		super(props);
-		this.state = {activeItem: this.getNavNameBasedOnRoute(props) };
+		this.state = { activeItem: this.getNavNameBasedOnRoute(props) };
 	}
 
-	getNavNameBasedOnRoute = (props) => {
+	getNavNameBasedOnRoute = props => {
 		let currentRoute = null;
-		
-		Object.entries(propObjects.NAV_BAR_LINKS).map((currentObj) => {
-			if(currentObj[1].to === props.location.pathname){
-				currentRoute = currentObj[1].name
+
+		Object.entries(retrievePropObjects.GET_NAV_BAR_ITEM).map(currentObj => {
+			if (currentObj[1].to === props.location.pathname) {
+				currentRoute = currentObj[1].name;
 			}
 			return currentRoute;
 		});
@@ -23,27 +23,23 @@ class NavBarContainer extends Component {
 		return currentRoute;
 	};
 
-	handleItemClick = (e, {name}) => this.setState({activeItem: name});
+	handleItemClick = (e, { name }) =>
+		!name
+			? this.setState({ activeItem: "home" })
+			: this.setState({ activeItem: name });
 
 	render() {
 		const props = {
-			getNavBarLogo: {...propObjects.NAV_BAR_LINKS.NAV_BAR_LOGO},
-			getDenStoriesMenuItem: (
+			getNavBarTabItems: Object.entries(
+				retrievePropObjects.GET_NAV_BAR_ITEM
+			).map((content, index) => (
 				<Menu.Item
-					active={this.state.activeItem === propObjects.NAV_BAR_LINKS.NAV_BAR_DEN_STORIES.name}
+					{...content[1]}
+					active={this.state.activeItem === content[1].name}
 					onClick={this.handleItemClick}
-					{...propObjects.NAV_BAR_LINKS.NAV_BAR_DEN_STORIES}
+					key={index}
 				/>
-			),
-			getGalleryMenuItem: (
-				<Menu.Item
-					active={this.state.activeItem === propObjects.NAV_BAR_LINKS.NAV_BAR_GALLERY.name}
-					onClick={this.handleItemClick}
-					{...propObjects.NAV_BAR_LINKS.NAV_BAR_GALLERY}
-				/>
-			),
-			getGitHubNavItem: {...propObjects.NAV_BAR_LINKS.NAV_BAR_GIT_HUB},
-			getLinkedinNavItem: {...propObjects.NAV_BAR_LINKS.NAV_BAR_LINKEDIN}
+			))
 		};
 
 		return <NavBarComponent {...props} />;

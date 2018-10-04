@@ -9,6 +9,9 @@ import sculpture from "./../app/images/sculpture.JPG";
 import knight from "./../app/images/knight.JPG";
 import wallMonument from "./../app/images/wall_art.JPG";
 import mummy from "./../app/images/mummy.JPG";
+import women from "./../app/images/ladyInChair.JPG";
+import halfHead from "./../app/images/halfHead.JPG";
+import rearShot from "./../app/images/backShot.JPG";
 
 export const ABOUT_ME_IMG = cardImage;
 export const NAV_BAR_LOGO = logo;
@@ -21,3 +24,6 @@ export const SCULPTURE_IMG = sculpture;
 export const MUMMY_IMG = mummy;
 export const MONUMENT_IMG = wallMonument;
 export const KNIGHT_IMG = knight;
+export const WOMEN_IMG = women;
+export const HALF_HEAD_IMG = halfHead;
+export const TAKEN_FROM_THE_BACK_IMG = rearShot;

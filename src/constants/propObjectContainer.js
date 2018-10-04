@@ -12,11 +12,12 @@ export const GALLERY_CARD_ITEMS = {
 		header: "The Sphinx",
 		meta: "MET Museum",
 		description: "Random Text That Is Placed Here For Looks",
-		color: "olive"
+		color: "olive",
+		onClick: () => {return alert( GALLERY_CARD_ITEMS.CARD_ONE.image )}
 	},
 	CARD_TWO: {
 		image: <Image src={images.SCULPTURE_IMG} size={"large"} centered />,
-		header: "The Bearded Man",
+		header: "The Wise Bearded Man",
 		meta: "MET Museum",
 		description: "Random Text That Is Placed Here For Looks",
 		color: "purple"
@@ -69,12 +70,38 @@ export const GALLERY_CARD_ITEMS = {
 		meta: "MET Museum",
 		description: "Random Text That Is Placed Here For Looks",
 		color: "brown"
+	},
+	CARD_TEM: {
+		image: <Image src={images.WOMEN_IMG} size={"large"} centered />,
+		header: "The Powerful",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
+		color: "yellow"
+	},
+	CARD_ELEVEN: {
+		image: <Image src={images.HALF_HEAD_IMG} size={"large"} centered />,
+		header: "The Jokester",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
+		color: "blue"
+	},
+	CARD_TWELVE: {
+		image: <Image src={images.TAKEN_FROM_THE_BACK_IMG} size={"large"} centered />,
+		header: "The Off Guards",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
+		color: "brown"
 	}
 };
 
+// export const GET_GALLERY_ON_CLICK_EVENT = {
+// 	GALLERY_ON_CLICK: {
+// 		handlePortalClick: () => alert( 'hello ' )
+// }}
+
 export const HOME_ITEMS = {
 	HOME_CARD: {
-		image: images.ABOUT_ME_IMG,
+		image: <Image src={images.ABOUT_ME_IMG} size='big' centered />,
 		header: "Marvin Moise",
 		meta: "Undergraduate",
 		description: [
@@ -83,7 +110,8 @@ export const HOME_ITEMS = {
 			"cease to learn from my mistakes. I’m always seeking new and exciting activities, ",
 			"challenges and projects to tackle."
 		].join(""),
-		color: "red"
+		color: "pink",
+		size: 'medium'
 	}
 };
 
@@ -160,32 +188,46 @@ export const DEN_STORIES = {
 	}
 };
 
-export const NAV_BAR_LINKS = {
-	NAV_BAR_DEN_STORIES: {
-		as: Link,
-		name: 'stories from the den',
-		to: routes.DEN_STORIES
-	},
-	NAV_BAR_GALLERY: {
-		as: Link,
-		name: 'gallery',
-		to: routes.GALLERY
-	},
+export const GET_NAV_BAR_ITEM = {
 	NAV_BAR_LOGO: {
 		as: Link,
 		icon: <Image size="tiny" src={images.NAV_BAR_LOGO} avatar />,
-		to: "/"
+		to: "/",
+		position: "left",
+	},
+	NAV_BAR_HOME: {
+		as: Link,
+		name: "home",
+		to: routes.LANDING,
+		//active: () => this.state.activeItem === this.NAV_BAR_DEN_STORIES.name,
+		//onClick: () => this.handleItemClick()
+	},
+	NAV_BAR_RESUME: {
+		as: Link,
+		name: "resume",
+		to: routes.RESUME
+	},
+	NAV_BAR_DEN_STORIES: {
+		as: Link,
+		name: "stories from the den",
+		to: routes.DEN_STORIES,
+	},
+	NAV_BAR_GALLERY: {
+		as: Link,
+		name: "gallery",
+		to: routes.GALLERY,
 	},
 	NAV_BAR_GIT_HUB: {
 		as: "a",
 		to: externalRoutes.GIT_HUB,
 		href: externalRoutes.GIT_HUB,
-		icon: <Icon name="github" size="big" color="teal" />
+		icon: <Icon name="github" size="big" color="teal" />,
+		position: "right",
 	},
 	NAV_BAR_LINKEDIN: {
 		as: "a",
 		to: externalRoutes.GIT_HUB,
 		href: externalRoutes.LINKEDIN, 
-		icon: <Icon name="linkedin" size="big" color="violet" />
+		icon: <Icon name="linkedin" size="big" color="violet" />,
 	}
 };
