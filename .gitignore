@@ -42,3 +42,4 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
+**/firebase
