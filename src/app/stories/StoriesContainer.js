@@ -4,6 +4,7 @@ import ItemContainer from "../shared/items/ItemContainer";
 import { CardGroup } from "semantic-ui-react";
 import GenerateListContainer from '../shared/lists/GenerateListContainer'
 import * as items from "../../constants/propObjectContainer";
+
 class StoriesContainer extends Component {
 	render() {
 		const propsToPass = {

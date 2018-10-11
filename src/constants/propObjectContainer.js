@@ -91,7 +91,14 @@ export const GALLERY_CARD_ITEMS = {
 		meta: "MET Museum",
 		description: "Random Text That Is Placed Here For Looks",
 		color: "brown"
-	}
+	},
+	CARD_THIRTEEN: {
+		image: <Image src={images.KNIGHT_GOWN}  size={"large"} centered />,
+		header: "The Knights Gown",
+		meta: "MET Museum",
+		description: "Random Text That Is Placed Here For Looks",
+		color: "purple"
+	},
 };
 
 // export const GET_GALLERY_ON_CLICK_EVENT = {
@@ -115,6 +122,74 @@ export const HOME_ITEMS = {
 	}
 };
 
+export const RESUME = {
+	BASIC_INFO: {
+		name: "Marvin",
+		label: "Software Engineer Intern",
+		email: "marvinmoise223@gmail.com",
+		phone: "404-573-0968"
+	},
+	EDUCATION: {
+		degree: "Bachelor of Science in Computer Science",
+		university: "Kennesaw State University",
+		gpa: "3.3",
+		expected_graduation: "Fall 2018"
+	},
+	TECHNICAL_EXPERIENCES: {
+		java: "Java",
+		react: "React",
+		dedux: "Redux",
+		heroku: "Heroku",
+		version_one: "Version one",
+		code_climate: "Code Climate",
+		jenkins: "Jenkins",
+		trello: "Trelloa",
+		vsCode: "Visual Studio Code",
+		git: "Git",
+		agile: "Agile",
+		semantic_ui: "Semantic_Ui"
+	},
+	OBJECTIVE: {
+		objective: `Seeking a full-time opportunity where my experiences and 
+					abilities will be efficiently utilized while providing 
+					opportunities for advancement.`
+	},
+	SUMMARY_OF_QUALIFICATION: {
+		qualification_one: "Excellent analytical skills with a capacity to grasp technical details",
+		qualification_two: "Excellent collaborative skills within the workplace",
+		qualification_three: "Passionate about producing quality work that’ll exceed business needs"
+	},
+	ON_CAMPUS_ORGANIZATIONS: {
+		organization_ACM: "ACM",
+		organization_IEEE: "IEEE",
+		organization_BDPA: "Black Data Processing Association",
+		organization_ISA: "International Student Association",
+		organization_AASA: "African American Student Alliance",
+		organization_KBDT: "KSU Break Dance Team",
+		organization_KCT: "KSU Cycling Team"
+	},
+	WORK_EXPERIENCE: {
+		stateFarm: {
+			company_name: "State Farm",
+			company_location: "Atlanta GA",
+			startDate_endDate: "May 2017 - Present",
+			currentTitle: "Software Engineer Intern"
+		},
+		ksu_teacher_assistant: {
+			company_name: "Kennesaw State University",
+			company_location: "Kennesaw GA",
+			startDate_endDate: "Jan 2016 - fall 2016",
+			currentTitle: "Teachers Assistant"
+		},
+		ksu_bike_ksu: {
+			company_name: "KSU Bike Shop",
+			company_location: "Kennesaw Ga",
+			stateDate_endDate: "Jan 2016 - fall 2017",
+			currentTitle: "Bike Tech"
+		}
+	}
+}
+
 export const DEN_STORIES = {
 	STORY_ONE: {
 		// card: <CardContainer {...HOME_ITEMS.HOME_CARD} />,
@@ -137,9 +212,9 @@ export const DEN_STORIES = {
 			"Within that minute, time within my perception had halted. In that minute I began to think, attempting ",
 			"to find hope; reason; meaning anything that would trigger me to continue to push onwards. ",
 			"For a slight second, I snapped out of my perpetual sense of hopelessness and I noticed the person ",
-			"in front of me, Montez, he was one of my best friends while I was at training. I saw the look ",
+			"in front of me, Montez, he was one of my best friends while I was at training. I saw the look of ",
 			"anguish and resentment on his face as he struggled to keep pace. That picture that is now ",
-			"engraved in my memory was all I needed to keep pushing myself, in an instant all meaning and ",
+			"engraved in my memories was all I needed to keep pushing myself, in an instant all meaning and ",
 			"hope had returned to me. I no longer thought of myself as an individual but as a member of a ",
 			"unit. Witnessing Montez struggle allowed me to feel as if I was not struggling alone, ",
 			"but that I was struggling collectively with others who were right here living in the moment next to ",
@@ -172,9 +247,9 @@ export const DEN_STORIES = {
 			"Within that minute, time within my perception had halted. In that minute I began to think, attempting ",
 			"to find hope; reason; meaning anything that would trigger me to continue to push onwards. ",
 			"For a slight second, I snapped out of my perpetual sense of hopelessness and I noticed the person ",
-			"in front of me, Montez, he was one of my best friends while I was at training. I saw the look ",
+			"in front of me, Montez, he was one of my best friends while I was at training. I saw the look of ",
 			"anguish and resentment on his face as he struggled to keep pace. That picture that is now ",
-			"engraved in my memory was all I needed to keep pushing myself, in an instant all meaning and ",
+			"engraved in my memories was all I needed to keep pushing myself, in an instant all meaning and ",
 			"hope had returned to me. I no longer thought of myself as an individual but as a member of a ",
 			"unit. Witnessing Montez struggle allowed me to feel as if I was not struggling alone, ",
 			"but that I was struggling collectively with others who were right here living in the moment next to ",

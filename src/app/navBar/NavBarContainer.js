@@ -7,7 +7,7 @@ import { withRouter } from "react-router";
 class NavBarContainer extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { activeItem: this.getNavNameBasedOnRoute(props) };
+		this.state = {activeItem: this.getNavNameBasedOnRoute(props)};
 	}
 
 	getNavNameBasedOnRoute = props => {
