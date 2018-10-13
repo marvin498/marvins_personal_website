@@ -1,10 +1,6 @@
 import React from "react";
 import { Grid, Image, Divider, List } from "semantic-ui-react";
 import CardContainer from './../shared/cards/CardContainer.js'
-import {hotjar} from 'react-hotjar';
-import {HOTJAR_ID, HOTJAR_SV} from './../../constants/hotJar.js'
-
-hotjar.initialize( HOTJAR_ID, HOTJAR_SV );
 
 const ResumeComponent = () => (
     <Grid textAlign="center" columns={2} doubling padded='vertically'>
