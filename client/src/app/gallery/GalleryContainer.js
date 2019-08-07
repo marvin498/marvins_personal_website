@@ -14,11 +14,9 @@ class GalleryContainer extends Component {
 	}
 
 	componentDidMount(){
-		const retrieveCardsFromFireStore = fireStoreDb.collection("gallery").doc("pmiepIDmE3XMMYImgehL");
-		retrieveCardsFromFireStore.get().then(cards => {
-			this.setState({
-				collectionOfCards: cards.data()
-			});
+		const retrieveCollectionOfCards = fireStoreDb.collection("gallery").doc("pmiepIDmE3XMMYImgehL");
+		retrieveCollectionOfCards.get().then(cards => {
+			this.setState({collectionOfCards: cards.data()});
 		});
 	}
 
@@ -29,7 +27,7 @@ class GalleryContainer extends Component {
 			itemsPerRow: "3",
 			wrapper: CardContainer,
 		}
-		const props = { card: <GenerateListContainer {...passToProps} />};
+		const props = <GenerateListContainer {...passToProps} />;
 
 		return <GalleryComponent {...props} />;
 	}

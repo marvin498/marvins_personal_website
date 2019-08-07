@@ -3,7 +3,7 @@ import { Segment } from "semantic-ui-react";
 
 const GalleryComponent = (galleryContent) => (
 	<Segment attached vertical>
-		{galleryContent.card}
+		{galleryContent}
 	</Segment>
 );
 

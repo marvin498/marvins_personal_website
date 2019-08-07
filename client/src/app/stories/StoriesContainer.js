@@ -14,8 +14,8 @@ class StoriesContainer extends Component {
 	}
 
 	componentDidMount() {
-		const fetchedStories = fireStoreDb.collection("stories").doc("KF94a0G0rr2RQXxyWVDE");
-		fetchedStories.get().then(stories => {
+		const retrieveCollectionOfStories = fireStoreDb.collection("stories").doc("KF94a0G0rr2RQXxyWVDE");
+		retrieveCollectionOfStories.get().then(stories => {
 			this.setState({collectionOfStories: stories.data()});
 		});
 	}
@@ -27,7 +27,7 @@ class StoriesContainer extends Component {
 			itemsPerRow: "1",
 			wrapper: ItemContainer
 		};
-		const props = { item: <GenerateListContainer {...propsToPass} /> };
+		const props = <GenerateListContainer {...propsToPass} />;
 		return <StoriesComponent {...props} />;
 	}
 }

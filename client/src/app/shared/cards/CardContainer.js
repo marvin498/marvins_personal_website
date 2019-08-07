@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import CardComponent from "./CardComponent.jsx";
 import { SEMANTIC_COLORS } from "./../../../constants/propObjectContainer.js";
-import { Image, Label } from "semantic-ui-react";
+import { Image } from "semantic-ui-react";
 import * as externalRoutes from "./../../../constants/externalRoutes";
 
 class CardContainer extends Component {
 	constructor(props) {
 		super();
 		this.state = {
-			isExtraHidden: true
+			isExtraContentHidden: true
 		};
 	}
 
@@ -16,14 +16,16 @@ class CardContainer extends Component {
 		return Object.keys(SEMANTIC_COLORS)[Math.floor(Math.random() * 2)];
 	};
 
-	toggleIsExtraHidden = () => {
-		this.setState(prevState => ({ isExtraHidden: !prevState.isExtraHidden }));
+	toggleIsExtraContentHidden = () => {
+		this.setState(prevState => ({
+			isExtraContentHidden: !prevState.isExtraContentHidden
+		}));
 	};
 
 	routeToExternalLink = () => {
-		let directToLink = {
+		const directToLink = {
 			"MET Museum": externalRoutes.MET_MUSEUM,
-			"Museum of Modern Art (MoMA)": externalRoutes.MOMA
+			"Museum of Modern Art (MoMA)": externalRoutes.MoMA
 		};
 
 		return directToLink[this.props.meta];
@@ -33,13 +35,13 @@ class CardContainer extends Component {
 		const props = {
 			image: <Image src={this.props.image} centered size="big" />,
 			header: this.props.header,
-			meta: <a href={this.routeToExternalLink()}>{this.props.meta}</a>, //remove a tag
+			meta: <a href={this.routeToExternalLink()}>{this.props.meta}</a>,
 			description: this.props.description,
-			extra: this.state.isExtraHidden ? null : this.props.extra,
+			extra: this.state.isExtraContentHidden ? null : this.props.extra,
 			color: this.props.generateColor ? this.generateColor() : this.props.color,
 			onClick: this.props.onClick
 				? this.props.onClick
-				: this.toggleIsExtraHidden
+				: this.toggleIsExtraContentHidden
 		};
 
 		return <CardComponent {...props} />;

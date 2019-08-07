@@ -19,8 +19,8 @@ class HomeContainer extends Component {
     }
 
     render(){
-        const propsToPass = Object.entries(this.state.collectionOfHomeItems).map(content => {return content[1]});
-        const props = {item: <CardContainer {...propsToPass[0]} />};
+        const homeScreenContent = Object.entries(this.state.collectionOfHomeItems).map(content => {return content[1]});
+        const props = <CardContainer {...homeScreenContent[0]} />;
 
         return <HomeComponent {...props} />
     }
