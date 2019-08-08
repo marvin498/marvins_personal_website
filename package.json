@@ -1,0 +1,30 @@
+{
+  "name": "marvins_personal_website",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
+  "main": "server.js",
+  "dependencies": {
+    "ace-builds": "^1.4.1",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme": "^3.7.0",
+    "jest": "^23.6.0",
+    "react-ace": "^6.2.0",
+    "react-hotjar": "^1.0.11",
+    "react-file-reader-input": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "react-scripts test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marvin498/marvins_personal_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marvin498/marvins_personal_website/issues"
+  },
+  "homepage": "https://github.com/marvin498/marvins_personal_website#readme"
+}
