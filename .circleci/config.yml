@@ -8,7 +8,7 @@ jobs:
   build:
     docker:
       - image: circleci/node:8
-    working_directory: ~/marvins_personal_website 
+    working_directory: ~/marvins_personal_website/client 
     steps:
       - checkout
       - restore_cache: # special step to restore the dependency cache
