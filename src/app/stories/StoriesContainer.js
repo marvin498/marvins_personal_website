@@ -3,7 +3,7 @@ import StoriesComponent from "./StoriesComponent";
 import ItemContainer from "../shared/items/ItemContainer";
 import { CardGroup } from "semantic-ui-react";
 import GenerateListContainer from "../shared/lists/GenerateListContainer";
-import {fireStoreDb} from "./../../firebase/firebase.js";
+import {fireStoreDb} from "../../firebase/firebase";
 
 class StoriesContainer extends Component {
 	constructor() {
