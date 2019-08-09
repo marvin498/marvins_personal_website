@@ -29,6 +29,6 @@ jobs:
           name: Run Test and Coverage
           command: |
             ./cc-test-reporter before-build
-            --passWithNoTests
+            jest --passWithNoTests
             ./cc-test-reporter after-build --exit-code $?
   
